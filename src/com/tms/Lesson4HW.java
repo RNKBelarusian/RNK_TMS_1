@@ -4,11 +4,13 @@ import java.util.Random;
 
 public class Lesson4HW {
     public static void main (String [] args) {
+    /* Задание 3.  */
 
     /* Задание 4. Определить число, полученное выписыванием в обратном порядке цифр
        любого 4-х значного натурального числа.  */
+
         System.out.println ("Задание 4");
-        int danoChislo = 8254;
+        int danoChislo = 8256;
         int oper1 =  danoChislo % 1000; // last three digits (Последние три цифры)
         int oper2 = (danoChislo - oper1) / 1000; // first digit (Первая цифра)
         int oper3 = oper1%100; // last two digits (Последние две цифры)
@@ -60,6 +62,7 @@ public class Lesson4HW {
     /* Задание 8. Имеется целое число (задать с помощью Random rand = new Random();
        int x = rand.nextInt() ). Это число - количество денег в рублях. Вывести это число,
        добавив к нему слово <<рублей>> в правильном падеже.   */
+
         System.out.println ("Задание 8");
         Random rand = new Random();
         // int x = 102; // Можно задать ручками (предварительно закаментить Random() )
