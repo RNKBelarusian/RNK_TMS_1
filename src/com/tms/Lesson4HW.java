@@ -73,5 +73,7 @@ public class Lesson4HW {
             System.out.println("Ваш баланс: " + x + " рубля.");
         } else {System.out.println("Ваш баланс: " + x + " рублей.");}
 
+        int w = rand.nextInt (1000);
+
     }
 }
