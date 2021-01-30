@@ -29,9 +29,7 @@ public class LessonHWArray {
             }
         System.out.println(max + " - Максимальный элемент массива." );*/
 
-
-
-
+    //******************************************************************************************************************
 
     /* Задание 14. Создать массив оценок произвольной длины, вывести максимальную и
        минимальную оценку, её (их) номера.   */
@@ -72,13 +70,14 @@ public class LessonHWArray {
         System.out.println(max + " - Максимальная оценка." );
         System.out.println(min + " - Минимальная оценка." );*/
 
+    //******************************************************************************************************************
 
     /* Задание 15. Создать массив, заполнить его случайными элементами, распечатать,
     перевернуть, и снова распечатать (при переворачивании нежелательно создавать
     еще один массив).  */
 
         // Динамичесская инициализация массива (Устанавливаем длинну массива)
-        Random rand15 = new Random();
+        /*Random rand15 = new Random();
         int var15 = rand15.nextInt(10)+5; // Эта будет длинна массива
 
         int array15 [] = new int[var15]; // объявление массива
@@ -105,21 +104,104 @@ public class LessonHWArray {
         System.out.println("Все элементы перевернутого массива ");
         for (int i = 0; i<array15.length; i++){
             System.out.print(array15[i] + " " );
-        }
+        }*/
 
-
-
-
-
+    //******************************************************************************************************************
 
     /* Задание 16. Определите сумму элементов одномерного массива, расположенных между
     минимальным и максимальным значениями.  */
 
+        /*Random rand16 = new Random();
+        int var16 = rand16.nextInt(8) + 8; // Эта будет длинна массива
+
+        int array16[] = new int[var16]; // объявление массива
+
+        System.out.println(var16 + " - Длинна массива");
+
+        // Динамичесская инициализация массива (Заполняем массив)
+        for (int i = 0; i < array16.length; i++) {
+            Random rand16for = new Random();
+            int var16for = rand16for.nextInt(12) + 3;
+            array16[i] = var16for;
+        }
+        // Вывод всех динамически проинициализированных элементов массива
+        for (int i = 0; i < array16.length; i++) {
+            System.out.print(array16[i] + " ");
+        }
+        System.out.println(" - Сам массив)) ");
+        // Определение максимального элемента массива и его индекса
+        System.out.println();
+        int max = 0;
+        int indexMax = 0;
+        for (int i = 0; i < array16.length; i++) {
+            if (array16[i] > max) {
+                max = array16[i];
+                indexMax = i;
+            }
+        }
+        // Определение минимального элемента массива
+        int min = 100;
+        int indexMin = 100;
+        for (int i = 0; i < array16.length; i++) {
+            if (array16[i] < min) {
+                min = array16[i];
+                indexMin = i;
+            }
+        }
+        System.out.println(min + " - Минимальный элемент массива");
+        System.out.println(indexMin + " - Индекс минимального элемента массива");
+        System.out.println();
+        System.out.println(max + " - Максимальный элемент массива");
+        System.out.println(indexMax + " - Индекс максимального элемента массива");
+        System.out.println();
+
+        // Определяем сумму элементов массива
+        // if - если индекс минимального значения меньше индекса максимального
+        // else - если индекс максимального значения меньше индекса минимального
+        int summm = 0;
+        if (indexMin < indexMax) {
+            for (int i = indexMin; i < indexMax - 1; i++) {
+                summm = summm + array16[i + 1];
+            }
+            System.out.println(summm + " - Сумма элементов массива между min и max элементами");
+        } else {
+            for (int i = indexMax; i < indexMin - 1; i++) {
+                summm = summm + array16[i + 1];
+            }
+            System.out.println(summm + " - Сумма элементов массива между max и min элементами");
+        }*/
+
+    //******************************************************************************************************************
+
+    /* Задание 17. Создать двухмерный квадратный массив, и заполнить его «бабочкой» */
+        int fon = 0;
+        int Zapolnenie = 1;
+
+        int array17[][] = new int[10][10];
+        // заполняем массив фоном
+        for (int i = 0; i < array17.length; i++) {
+            for (int j = 0; j < array17[i].length; j++) {
+                array17[i][j] = fon;
+            }
+        }
+        // заполняем массив рисунком
+
+        for (int i = 0; i < array17.length; i++) {
+
+            for (int j = 0; j < array17[i].length; j++) {
+                array17[i][j] = Zapolnenie;
+            }
 
 
-    /* Задание 17. Создать двухмерный квадратный массив, и заполнить его «бабочкой», т.е
-    таким образом: */
+        }
 
 
+        // печатаем массив
+        for (int i = 0; i < array17.length; i++) {
+            System.out.println();
+            for (int j = 0; j < array17[i].length; j++) {
+                System.out.print(array17[i][j] + "  ");
+            }
+        }
     }
 }
