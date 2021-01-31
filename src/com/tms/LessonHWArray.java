@@ -174,34 +174,31 @@ public class LessonHWArray {
     //******************************************************************************************************************
 
     /* Задание 17. Создать двухмерный квадратный массив, и заполнить его «бабочкой» */
-        int fon = 0;
-        int Zapolnenie = 1;
 
-        int array17[][] = new int[10][10];
-        // заполняем массив фоном
-        for (int i = 0; i < array17.length; i++) {
-            for (int j = 0; j < array17[i].length; j++) {
-                array17[i][j] = fon;
+        int array17[][] = new int[11][11];
+        int i, j;
+
+        for (i = 0; i < array17.length / 2 + 1; i++) {
+            for (j = 0; j < array17[i].length; j++) {
+                if ((j < i) || (j >= (array17[i].length - i)))
+                    array17[i][j] = 0;
+                else
+                    array17[i][j] = 1;
             }
         }
-        // заполняем массив рисунком
-
-        for (int i = 0; i < array17.length; i++) {
-
-            for (int j = 0; j < array17[i].length; j++) {
-                array17[i][j] = Zapolnenie;
+        for (i = array17.length - 1; i >= array17.length / 2; i--) {
+            for (j = 0; j < array17[i].length; j++) {
+                if ((j < (array17[i].length - 1 - i)) || (j > i))
+                    array17[i][j] = 0;
+                else
+                    array17[i][j] = 1;
             }
-
-
         }
-
-
-        // печатаем массив
-        for (int i = 0; i < array17.length; i++) {
-            System.out.println();
-            for (int j = 0; j < array17[i].length; j++) {
-                System.out.print(array17[i][j] + "  ");
+        for (i = 0; i < array17.length; i++) {
+            for (j = 0; j < array17[i].length; j++) {
+                System.out.print(array17[i][j] + " ");
             }
+            System.out.println(" ");
         }
     }
 }
