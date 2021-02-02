@@ -21,4 +21,3 @@ public class Lesson4HWTask5 {
 
     }
 }
-// Доработать есть замечания
