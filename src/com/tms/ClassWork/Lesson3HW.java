@@ -1,7 +1,8 @@
-package com.tms;
+package com.tms.ClassWork;
 
 //import java.lang.Math;
 public class Lesson3HW {
+
     public static void main (String [] args){
 
        //int i0 = Integer.parseInt (args [0]);
@@ -13,5 +14,6 @@ public class Lesson3HW {
        int a = 5;
        float b = 5.0f;
        System.out.println(a == b);
+
     }
 }
