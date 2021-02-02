@@ -1,4 +1,4 @@
-package com.tms;
+package com.tms.HomeWork;
 import java.util.Random;
 
 public class Lesson5HWCycle {

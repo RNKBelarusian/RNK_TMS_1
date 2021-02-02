@@ -1,4 +1,4 @@
-package com.tms;
+package com.tms.HomeWork;
 
 public class Lesson5Array {
     public static void main (String [] args) {

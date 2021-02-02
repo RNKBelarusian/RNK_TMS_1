@@ -1,4 +1,4 @@
-package com.tms;
+package com.tms.HomeWork;
 
 import java.util.Random;
 
@@ -175,23 +175,23 @@ public class LessonHWArray {
 
     /* Задание 17. Создать двухмерный квадратный массив, и заполнить его «бабочкой» */
 
-        int array17[][] = new int[11][11];
+        char array17[][] = new char[11][11];
         int i, j;
 
         for (i = 0; i < array17.length / 2 + 1; i++) {
             for (j = 0; j < array17[i].length; j++) {
                 if ((j < i) || (j >= (array17[i].length - i)))
-                    array17[i][j] = 0;
+                    array17[i][j] = 35;
                 else
-                    array17[i][j] = 1;
+                    array17[i][j] = 176;
             }
         }
         for (i = array17.length - 1; i >= array17.length / 2; i--) {
             for (j = 0; j < array17[i].length; j++) {
                 if ((j < (array17[i].length - 1 - i)) || (j > i))
-                    array17[i][j] = 0;
+                    array17[i][j] = 35;
                 else
-                    array17[i][j] = 1;
+                    array17[i][j] = 176;
             }
         }
         for (i = 0; i < array17.length; i++) {
@@ -199,6 +199,7 @@ public class LessonHWArray {
                 System.out.print(array17[i][j] + " ");
             }
             System.out.println(" ");
+
         }
     }
 }
